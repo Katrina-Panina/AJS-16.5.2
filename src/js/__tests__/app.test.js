@@ -7,7 +7,7 @@ import Zombie from '../zombie';
 import Daemon from '../daemon';
 
 test('Make Bowman from Character', () => {
-  expect(new Character('Lev", "Bowman')).toEqual({
+  expect(new Character('Lev', 'Bowman')).toEqual({
     attack: 25,
     defence: 25,
     health: 100,
@@ -65,7 +65,7 @@ test('Make Magician', () => {
   });
 });
 
-test("Make Undead", () => {
+test('Make Undead', () => {
   expect(new Undead('Lev')).toEqual({
     attack: 25,
     defence: 25,
