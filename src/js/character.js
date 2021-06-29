@@ -6,13 +6,13 @@ export default class Character {
     this.type = type;
     // eslint-disable-next-line no-mixed-operators
     if (
-      this.name.length < 2 
-      || this.name.length > 10 
-      || (this.type !== 'Bowman' 
-      && this.type !== 'Swordsman' 
-      && this.type !== 'Magician' 
-      && this.type !== 'Daemon' 
-      && this.type !== 'Undead' 
+      this.name.length < 2
+      || this.name.length > 10
+      || (this.type !== 'Bowman'
+      && this.type !== 'Swordsman'
+      && this.type !== 'Magician'
+      && this.type !== 'Daemon'
+      && this.type !== 'Undead'
       && this.type !== 'Zombie')
     ) {
       throw new Error('Введены некорректные данные');
