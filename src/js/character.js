@@ -6,38 +6,38 @@ export default class Character {
     this.type = type;
     // eslint-disable-next-line no-mixed-operators
     if (
-      this.name.length < 2 ||
-      this.name.length > 10 ||
-      (this.type !== "Bowman" &&
-        this.type !== "Swordsman" &&
-        this.type !== "Magician" &&
-        this.type !== "Daemon" &&
-        this.type !== "Undead" &&
-        this.type !== "Zombie")
+      this.name.length < 2 
+      || this.name.length > 10 
+      || (this.type !== 'Bowman' 
+      && this.type !== 'Swordsman' 
+      && this.type !== 'Magician' 
+      && this.type !== 'Daemon' 
+      && this.type !== 'Undead' 
+      && this.type !== 'Zombie')
     ) {
-      throw new Error("Введены некорректные данные");
+      throw new Error('Введены некорректные данные');
     }
-    if (type === "Bowman") {
+    if (type === 'Bowman') {
       this.attack = 25;
       this.defence = 25;
     }
-    if (type === "Swordsman") {
+    if (type === 'Swordsman') {
       this.attack = 40;
       this.defence = 10;
     }
-    if (type === "Magician") {
+    if (type === 'Magician') {
       this.attack = 10;
       this.defence = 40;
     }
-    if (type === "Undead") {
+    if (type === 'Undead') {
       this.attack = 25;
       this.defence = 25;
     }
-    if (type === "Zombie") {
+    if (type === 'Zombie') {
       this.attack = 40;
       this.defence = 10;
     }
-    if (type === "Daemon") {
+    if (type === 'Daemon') {
       this.attack = 10;
       this.defence = 40;
     }
@@ -45,7 +45,7 @@ export default class Character {
 
   levelUp() {
     if (this.health < 1) {
-      throw new Error("Персонаж мертв");
+      throw new Error('Персонаж мертв');
     }
     // eslint-disable-next-line no-plusplus
     this.level++;
@@ -58,7 +58,7 @@ export default class Character {
     this.health -= points * (1 - this.defence / 100);
     if (this.health <= 0) {
       this.health = 0;
-      throw new Error("Персонаж мертв");
+      throw new Error('Персонаж мертв');
     }
   }
 }
