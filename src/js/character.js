@@ -37,11 +37,13 @@ export default class Character {
         this.attack = 10;
         this.defence = 40;
         break;
+      default: // do nothing;
+        break;
     }
     this.name = name;
     this.type = type;
     this.health = 100;
-    this.level = 1;     
+    this.level = 1;
   }
 
   levelUp() {
