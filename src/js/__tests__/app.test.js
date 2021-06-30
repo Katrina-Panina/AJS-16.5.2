@@ -92,6 +92,10 @@ test('Throw error on short or long name', () => {
   expect(() => new Character('LevLevLevLev', 'Bowman')).toThrow();
 });
 
+test('Throw error on type', () => {
+  expect(() => new Character('Lev', 'Archer')).toThrowError();
+});
+
 test('levelUp', () => {
   const bow1 = new Bowman('Lev');
   bow1.health = 50;
