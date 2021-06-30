@@ -88,8 +88,8 @@ test('Make Zombie', () => {
 });
 
 test('Throw error on short or long name', () => {
-  expect(() => new Bowman('L')).toThrow();
-  expect(() => new Bowman('LevLevLev')).toThrow();
+  expect(() => new Character('L', 'Bowman')).toThrow();
+  expect(() => new Character('LevLevLev', 'Bowman')).toThrow();
 });
 
 test('levelUp', () => {
