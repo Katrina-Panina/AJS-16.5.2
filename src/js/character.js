@@ -1,20 +1,15 @@
+const types = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
+
 export default class Character {
   constructor(name, type) {
     this.health = 100;
     this.level = 1;
     this.name = name;
     this.type = type;
-    // eslint-disable-next-line no-mixed-operators
-    if (
-      name.length < 2
-      || name.length > 10
-      || (this.type !== 'Bowman'
-      && this.type !== 'Swordsman'
-      && this.type !== 'Magician'
-      && this.type !== 'Daemon'
-      && this.type !== 'Undead'
-      && this.type !== 'Zombie')
-    ) {
+    if (name.length < 2 || name.length > 10) {
+      throw new Error('Введены некорректные данные');
+    }
+    if(!types.includes(type)) {
       throw new Error('Введены некорректные данные');
     }
     if (type === 'Bowman') {
