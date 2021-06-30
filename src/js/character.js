@@ -12,30 +12,36 @@ export default class Character {
     if(!types.includes(type)) {
       throw new Error('Введены некорректные данные');
     }
-    if (type === 'Bowman') {
-      this.attack = 25;
-      this.defence = 25;
-    }
-    if (type === 'Swordsman') {
-      this.attack = 40;
-      this.defence = 10;
-    }
-    if (type === 'Magician') {
-      this.attack = 10;
-      this.defence = 40;
-    }
-    if (type === 'Undead') {
-      this.attack = 25;
-      this.defence = 25;
-    }
-    if (type === 'Zombie') {
-      this.attack = 40;
-      this.defence = 10;
-    }
-    if (type === 'Daemon') {
-      this.attack = 10;
-      this.defence = 40;
-    }
+    switch(type) {
+      case 'Bowman':
+        this.attack = 25;
+        this.defence = 25;
+        break;
+      case 'Swordsman':
+        this.attack = 40;
+        this.defence = 10;
+        break;
+      case 'Magician':
+        this.attack = 10;
+        this.defence = 40;
+        break;
+      case 'Undead':
+        this.attack = 25;
+        this.defence = 25;
+        break;
+      case 'Zombie':
+        this.attack = 40;
+        this.defence = 10;
+        break;
+      case 'Daemon':
+        this.attack = 10;
+        this.defence = 40;
+        break;
+  }
+  this.name = name;
+  this.type = type;
+  this.health = 100;
+  this.level = 1;     
   }
 
   levelUp() {
